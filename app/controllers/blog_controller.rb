@@ -1,2 +1,2 @@
-class BlogController < ActionController::Base
+class BlogController < ApplicationController
 end
