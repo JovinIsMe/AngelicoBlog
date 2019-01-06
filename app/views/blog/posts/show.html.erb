@@ -6,7 +6,7 @@
     <h1><%= @post.title %></h1>
     <p><%= @post.display_published_time %></p>
     <h3>Body</h3>
-    <%= @post.body %>
+    <%= @post.body.html_safe %>
     <h3>Description</h3>
     <%= @post.description %>
   </div>
