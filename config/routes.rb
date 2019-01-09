@@ -4,7 +4,12 @@ Rails.application.routes.draw do
   root to: 'blog/posts#index'
 
   namespace :authors do
-    resources :posts
+    resources :posts do
+      member do
+        put 'publish' => 'posts#publish'
+        put 'unpublish' => 'posts#unpublish'
+      end
+    end
     # method
     # get 'broadcast' => 'url', as: :prefix
     # get :broadcast
@@ -13,7 +18,7 @@ Rails.application.routes.draw do
   scope module: 'blog' do
     get 'about' => 'pages#about', as: :about
     get 'contact' => 'pages#contact', as: :contact
-    
+
     get 'posts' => 'posts#index', as: :posts
     get 'posts/new' => 'posts#new', as: :new_post
     get 'posts/:id'=> 'posts#show', as: :post

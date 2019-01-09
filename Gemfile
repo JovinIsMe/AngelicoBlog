@@ -21,6 +21,8 @@ gem 'bootstrap', '~> 4.2.1'
 gem 'friendly_id', '~> 5.2.4'
 # Use devise
 gem 'devise'
+# Use Annotate Model
+gem 'annotate'
 
 
 # Use CoffeeScript for .coffee assets and views
