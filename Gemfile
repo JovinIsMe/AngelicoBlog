@@ -23,6 +23,8 @@ gem 'friendly_id', '~> 5.2.4'
 gem 'devise'
 # Use Annotate Model
 gem 'annotate'
+# Use will_paginate for pagination
+gem 'will_paginate-bootstrap4'
 
 
 # Use CoffeeScript for .coffee assets and views
