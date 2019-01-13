@@ -25,6 +25,8 @@ gem 'devise'
 gem 'annotate'
 # Use will_paginate for pagination
 gem 'will_paginate-bootstrap4'
+# Add taggable to a model
+gem 'acts-as-taggable-on', '~> 6.0'
 
 
 # Use CoffeeScript for .coffee assets and views
