@@ -28,11 +28,6 @@ ActiveRecord::Schema.define(version: 2019_01_13_154010) do
     t.index ["reset_password_token"], name: "index_authors_on_reset_password_token", unique: true
   end
 
-  create_table "comments", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "friendly_id_slugs", force: :cascade do |t|
     t.string "slug", null: false
     t.integer "sluggable_id", null: false
