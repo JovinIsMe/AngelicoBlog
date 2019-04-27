@@ -3,7 +3,7 @@
 
 <div>
   <%= link_to 'Edit', edit_authors_post_path(@post), class: 'btn btn-sm btn-warning' %>
-  <%= link_to 'Delete', authors_post_path(@post), class:'btn btn-sm btn-danger', method: :delete, data: { 
+  <%= link_to 'Delete', authors_post_path(@post), class:'btn btn-sm btn-danger', method: :delete, data: {
     confirm: 'Are you sure?'
   } %>
 </div>
@@ -11,6 +11,7 @@
 <div class="row">
   <div class="col-md-10 offset-md-1 col-lg-8 offset-lg-2 text-sm-center">
     <h1><%= @post.title %></h1>
+    <%= image_tag(@post.image.url, alt: 'Image') if @post.image? %>
     <p><%= @post.display_published_time %></p>
     <%= @post.body.html_safe %>
   </div>

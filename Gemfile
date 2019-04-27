@@ -27,6 +27,9 @@ gem 'annotate'
 gem 'will_paginate-bootstrap4'
 # Add taggable to a model
 gem 'acts-as-taggable-on', '~> 6.0'
+# Use CarrierWave to upload file
+gem 'carrierwave', '~> 1.0'
+gem 'mini_magick'
 
 
 # Use CoffeeScript for .coffee assets and views

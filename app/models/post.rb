@@ -9,7 +9,7 @@
 #  slug             :string
 #  created_at       :datetime         not null
 #  updated_at       :datetime         not null
-#  banner_image_url :string
+#  image :string
 #  author_id        :integer
 #  published        :boolean          default(FALSE)
 #  published_at     :datetime
@@ -22,6 +22,8 @@ class Post < ApplicationRecord
   extend FriendlyId
   friendly_id :title, use: :slugged
 
+  mount_uploader :image, ImageUploader
+
   belongs_to :author
 
   PER_PAGE = 3
@@ -33,7 +35,7 @@ class Post < ApplicationRecord
   scope :published, -> {
     where(published: true)
   }
-  
+
   scope :recent_paginated, -> (page) {
     most_recent.paginate(:page => page, per_page: PER_PAGE)
   }
@@ -43,7 +45,7 @@ class Post < ApplicationRecord
   scope :list_for, -> (page, tag) do
     recent_paginated(page).with_tag(tag)
   end
-  
+
   def should_generate_new_friendly_id?
     title_changed?
   end
