@@ -26,7 +26,7 @@ gem 'will_paginate-bootstrap4'
 # Add taggable to a model
 gem 'acts-as-taggable-on', '~> 6.0'
 # Use CarrierWave to upload file
-gem 'carrierwave', '~> 1.0'
+gem 'carrierwave', '~> 1.3'
 gem 'mini_magick'
 
 
