@@ -1,0 +1,29 @@
+version: '3.9'
+services:
+  db:
+    image: postgres:14.3
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_HOST_AUTH_METHOD: 'trust'
+    restart: always
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+  web:
+    image: angelicoblog
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        USER_ID: 1000
+        GROUP_ID: 1000
+    volumes:
+      - $PWD:/app
+    ports:
+      - "3000:3000"
+    depends_on:
+      db:
+        condition: service_started
+
+volumes:
+  pgdata:

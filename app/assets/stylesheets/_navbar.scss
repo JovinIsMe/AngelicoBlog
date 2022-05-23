@@ -1,22 +1,22 @@
 .navbar {
     border-radius: 0;
     margin-bottom: 10px;
-    background-color: $primary-color;
+    background-color: #2196F3;
     .navbar-brand {
         font-weight: bolder;
-        color: $accent-color;
+        color: #CDDC39;
         .light {
             font-weight: 300;
-            color: $primary-color-text;
+            color: #757575;
         }
     }
     .navbar-toggler {
         outline: none;
     }
     .nav-link {
-      color: $primary-color-light !important;
+      color: #BBDEFB !important;
       &.active {
-        color: $primary-color-text !important;
+        color: #FFFFFF !important;
       }
     }
     .nav-item.author-nav {
@@ -24,7 +24,7 @@
         height: 30px;
         width: 30px;
         border-radius: 50%;
-        border: 1px solid $primary-color-light;
+        border: 1px solid #FFFFFF;
       }
     }
 }
