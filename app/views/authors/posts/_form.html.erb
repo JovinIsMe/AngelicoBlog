@@ -12,32 +12,29 @@
   <% end %>
 
   <div class="row">
-    <div class="col-md-3">
-      <div class="field">
-        <%= form.label :title %>
-        <%= form.text_field :title %>
-      </div>
-
-      <div class="field">
-        <%= form.label :image %>
-        <%= form.file_field :image %>
-      </div>
-
-      <div class="field">
-        <%= form.label :description %>
-        <%= form.text_area :description %>
-      </div>
-
-      <div class="field">
-        <%= form.label 'Tags' %>
-        <%= form.text_area :tag_list %>
-      </div>
+    <div class="field col-md-3">
+      <%= form.label :title %>
+      <%= form.text_field :title %>
     </div>
-    <div class="col-md-9">
-      <div class="field">
-        <%= form.label :body %>
-        <%= form.text_area :body %>
-      </div>
+
+    <div class="field">
+      <%= form.label :image %>
+      <%= form.file_field :image %>
+    </div>
+
+    <div class="field">
+      <%= form.label :description %>
+      <%= form.text_area :description %>
+    </div>
+
+    <div class="field">
+      <%= form.label 'Tags' %>
+      <%= form.text_area :tag_list %>
+    </div>
+
+    <div class="col-md-12">
+      <%= form.label :body %>
+      <%= form.text_area :body %>
     </div>
   </div>
 
